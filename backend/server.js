@@ -2,10 +2,10 @@
 const dbConnect = require('./config/db');
 const cors = require('cors');
 const path = require('path');
+const express = require('express');
 const app = express();
 
 //creating app
-const express = require('express');
 
 const clientBuildPath = path.join(__dirname,"../client/build");
 console.log(clientBuildPath);
