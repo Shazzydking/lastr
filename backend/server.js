@@ -16,11 +16,7 @@ app.get("*", (req,res) => {
 
 
 //creating middleware
-app.use(cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    
-}));
+app.use(cors());
 app.use(express.json());
 
 
