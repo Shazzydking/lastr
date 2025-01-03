@@ -1,14 +1,26 @@
 //imports
 const dbConnect = require('./config/db');
 const cors = require('cors');
-
+const path = require('path');
+const app = express();
 
 //creating app
 const express = require('express');
-const app = express();
+
+const clientBuildPath = path.join(__dirname,"../client/build");
+console.log(clientBuildPath);
+app.use(express.static(clientBuildPath));
+app.get("*", (req,res) => {
+    res.sendFile(path.join(clientBuildPath, "index.html"));
+})
+
 
 //creating middleware
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    
+}));
 app.use(express.json());
 
 
