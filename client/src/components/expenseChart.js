@@ -21,7 +21,7 @@ const ExpenseChart = () => {
                     throw new Error("User not authenticated");
                 }
 
-                const response = await axios.get("http://localhost:5000/api/expense", {
+                const response = await axios.get("https://lastr.onrender.com/api/expense", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

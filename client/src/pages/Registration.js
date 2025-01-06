@@ -10,7 +10,7 @@ const Register = () => {
     const onFinish = async (values) => {
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', values);
+            const response = await axios.post('https://lastr.onrender.com/api/auth/register', values);
             message.success("User  Created Successfully");
             navigate('/login');
         } catch (error) {

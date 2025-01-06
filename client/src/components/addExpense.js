@@ -11,7 +11,7 @@ const AddExpense = () => {
         try {
             const token = localStorage.getItem("authToken");
             const response = await axios.post(
-                "http://localhost:5000/api/expense",
+                "https://lastr.onrender.com/api/expense",
                 values,
                 {
                     headers: {

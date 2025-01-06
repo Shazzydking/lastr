@@ -24,7 +24,7 @@ const ExpenseList = () => {
                 throw new Error("User  not authenticated");
             }
 
-            const response = await axios.get("http://localhost:5000/api/expense", {
+            const response = await axios.get("https://lastr.onrender.com/api/expense", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -45,7 +45,7 @@ const ExpenseList = () => {
                   throw new Error("User  not authenticated");
               }
       
-              await axios.delete(`http://localhost:5000/api/expense/${id}`, {
+              await axios.delete(`https://lastr.onrender.com/api/expense/${id}`, {
                   headers: {
                       Authorization: `Bearer ${token}`,
                   },
@@ -80,7 +80,7 @@ const ExpenseList = () => {
               if (!token) {
                   throw new Error("User  not authenticated");
               }
-              await axios.put(`http://localhost:5000/api/expense/${selectedExpense._id}`, values, {
+              await axios.put(`https://lastr.onrender.com/api/expense/${selectedExpense._id}`, values, {
                   headers: {
                       Authorization: `Bearer ${token}`,
                   },
