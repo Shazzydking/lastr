@@ -18,7 +18,7 @@ app.get("*", (req,res) => {
 //creating middleware
 app.use(cors({
     origin: "https://lastr.onrender.com", // Replace with your frontend URL
-    credentials: true, // Required for cookies or tokens
+    // credentials: true, // Required for cookies or tokens
 }));
 app.use(express.json());
 
